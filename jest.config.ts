@@ -87,7 +87,6 @@ export default {
 		'@domain/(.*)': '<rootDir>/src/domain/$1',
 		'@application/(.*)': '<rootDir>/src/application/$1',
 		'@infra/(.*)': '<rootDir>/src/infra/$1',
-		'@main/(.*)': '<rootDir>/src/main/$1',
 		'@tests/(.*)': '<rootDir>/tests/$1'
 	},
 
@@ -101,7 +100,6 @@ export default {
 	// notifyMode: "failure-change",
 
 	// A preset that is used as a base for Jest's configuration
-	preset: '@shelf/jest-mongodb',
 
 	// Run tests from one or more projects
 	// projects: undefined,
