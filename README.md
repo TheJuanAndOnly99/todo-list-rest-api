@@ -51,7 +51,7 @@ The server will start running on `http://localhost:3000`.
 
   - **Status Code:** 201 (Created)
 
-#### OR Curl:
+#### with cURL:
 ```curl -X POST -H "Content-Type: application/json" -d '{"title": "New Todo", "text": "New Todo Text"}' http://localhost:3000/todos```
 
 ### Get all todos
@@ -74,7 +74,7 @@ The server will start running on `http://localhost:3000`.
     ]
     ```
     
-#### OR Curl:
+#### with cURL:
 ```curl -X GET http://localhost:3000/todos```
     
 ### Toggle the completion of a todo
@@ -90,7 +90,7 @@ The server will start running on `http://localhost:3000`.
   - **Status Code:** 200 (OK) - If the todo exists and the completion status was toggled successfully.
   - **Status Code:** 404 (Not Found) - If the todo with the specified ID does not exist.
 
-#### OR Curl
+#### with cURL
 ```curl -X PUT http://localhost:3000/todos/{id}```
 
 ### Delete a todo
@@ -106,7 +106,7 @@ The server will start running on `http://localhost:3000`.
   - **Status Code:** 200 (OK) - If the todo was deleted successfully.
   - **Status Code:** 404 (Not Found) - If the todo with the specified ID does not exist.
 
-#### OR Curl
+#### with cURL
 ```curl -X DELETE http://localhost:3000/todos/{id}```
 
 ## Contributing
