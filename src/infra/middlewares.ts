@@ -11,3 +11,18 @@ export function enableCORS(_req: Request, res: Response, next: NextFunction) {
 	res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 	next();
 }
+
+export function requireBasicAuth(req: Request, res: Response, next: NextFunction): void {
+	const authHeader = req.headers.authorization;
+
+	// Check if Authorization header exists and contains basic authentication
+	if (!authHeader || !authHeader.startsWith('Basic ')) {
+		res.status(401).send('Unauthorized');
+		return;
+	}
+
+	// Perform further validation and authentication logic if needed
+	// For example, decode and validate the username and password
+
+	next();
+}
