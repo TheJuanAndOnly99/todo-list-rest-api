@@ -12,13 +12,13 @@ To get started with the API, follow these steps:
 1. Clone the repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/TheJuanAndOnly99/todo-list-rest-api.git
 ```
 
 2. Install the dependencies:
 
 ```
-cd <project-directory>
+cd todo-list-rest-api
 npm install
 ```
 
