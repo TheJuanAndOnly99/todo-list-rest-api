@@ -1,3 +1,6 @@
+![example workflow](https://github.com/thejuanandonly99/rest-api/actions/workflows/main.yml/badge.svg)
+
+
 # Todo API
 
 This is a simple API for managing todos on a local json file.
