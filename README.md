@@ -3,7 +3,7 @@
 
 # Todo API
 
-This is a simple API for managing todos on a local json file.
+This is a simple API for managing todos.
 
 ## Getting Started
 
