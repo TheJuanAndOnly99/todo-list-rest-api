@@ -10,13 +10,11 @@ export class TodoController {
 	}
 
 	getAllTodos(_req: Request, res: Response): void {
-		res.set('Authorization', 'Basic ' + process.env.AUTH);
 		const todos = this.todoRepository.getAllTodos();
 		res.json(todos);
 	}
 
 	createTodo(req: Request, res: Response): void {
-		res.set('Authorization', 'Basic ' + process.env.AUTH);
 		const { title, text, completed } = req.body;
 		const newTodo: Todo = new Todo({
 			idCounter: this.todoRepository.getNextId(),

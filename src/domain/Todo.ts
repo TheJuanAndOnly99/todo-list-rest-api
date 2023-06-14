@@ -6,7 +6,7 @@ export type TodoProps = {
 };
 
 export class Todo {
-	public readonly idCounter: number;
+	public idCounter: number;
 
 	public title: string;
 

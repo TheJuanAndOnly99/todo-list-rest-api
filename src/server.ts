@@ -22,11 +22,15 @@ app.use(enableCORS);
 app.get('/todos', addAuthHeader, requireBasicAuth, (req, res) =>
 	todoController.getAllTodos(req, res)
 );
-app.post('/todos', requireBasicAuth, (req, res) => todoController.createTodo(req, res));
-app.put('/todos/:id', requireBasicAuth, (req, res) =>
+app.post('/todos', addAuthHeader, requireBasicAuth, (req, res) =>
+	todoController.createTodo(req, res)
+);
+app.put('/todos/:id', addAuthHeader, requireBasicAuth, (req, res) =>
 	todoController.toggleTodoCompletion(req, res)
 );
-app.delete('/todos/:id', requireBasicAuth, (req, res) => todoController.deleteTodoById(req, res));
+app.delete('/todos/:id', addAuthHeader, requireBasicAuth, (req, res) =>
+	todoController.deleteTodoById(req, res)
+);
 
 const server = app.listen(3000, () => {
 	console.log('Server is listening on port 3000');
