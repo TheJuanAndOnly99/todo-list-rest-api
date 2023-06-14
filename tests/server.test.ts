@@ -44,6 +44,15 @@ jest.mock('../src/domain/Todo', () => {
 	return { Todo: MockTodo };
 });
 
+jest.mock('../todos.json', () => [
+	{
+		idCounter: 1,
+		title: 'New Todo',
+		text: 'New Todo Text',
+		completed: false
+	}
+]);
+
 describe('Todo API', () => {
 	// close express
 	afterAll(() => {
