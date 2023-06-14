@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-const { defaults: tsjPreset } = require('ts-jest/presets');
+import { defaults as tsjPreset } from 'ts-jest/presets';
 
 export default {
 	// All imported modules in your tests should be mocked automatically
