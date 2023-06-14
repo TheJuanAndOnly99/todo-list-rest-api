@@ -4,7 +4,7 @@ import {
 	enableCORS,
 	requireBasicAuth,
 	addAuthHeader
-} from '../../src/infra/middlewares';
+} from '../../../src/infra/middlewares/middlewares';
 
 describe('Middleware Tests', () => {
 	let req: Partial<Request>;
