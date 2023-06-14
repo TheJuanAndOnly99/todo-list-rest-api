@@ -20,9 +20,10 @@ export function requireBasicAuth(req: Request, res: Response, next: NextFunction
 		res.status(401).send('Unauthorized');
 		return;
 	}
+	next();
+}
 
-	// Perform further validation and authentication logic if needed
-	// For example, decode and validate the username and password
-
+export function addAuthHeader(req: Request, _res: Response, next: NextFunction): void {
+	req.headers.authorization = 'Basic ' + process.env.AUTH;
 	next();
 }

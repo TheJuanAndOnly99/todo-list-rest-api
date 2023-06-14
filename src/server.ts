@@ -2,9 +2,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { TodoController } from './application/TodoController';
 import { TodoRepository } from './infra/TodoRepo';
-import { addCacheControlHeader, enableCORS } from './infra/middlewares';
+import { addAuthHeader, addCacheControlHeader, enableCORS } from './infra/middlewares';
 import { requireBasicAuth } from './infra/middlewares';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 
@@ -17,7 +19,9 @@ app.use(addCacheControlHeader);
 // Middleware to enable CORS
 app.use(enableCORS);
 
-app.get('/todos', requireBasicAuth, (req, res) => todoController.getAllTodos(req, res));
+app.get('/todos', addAuthHeader, requireBasicAuth, (req, res) =>
+	todoController.getAllTodos(req, res)
+);
 app.post('/todos', requireBasicAuth, (req, res) => todoController.createTodo(req, res));
 app.put('/todos/:id', requireBasicAuth, (req, res) =>
 	todoController.toggleTodoCompletion(req, res)
