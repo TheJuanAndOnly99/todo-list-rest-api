@@ -3,7 +3,7 @@
 
 # Todo API
 
-This is a simple API for managing todos on a local json file.
+This is a simple API for managing todos.
 
 ## Getting Started
 
@@ -12,13 +12,13 @@ To get started with the API, follow these steps:
 1. Clone the repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/TheJuanAndOnly99/todo-list-rest-api.git
 ```
 
 2. Install the dependencies:
 
 ```
-cd <project-directory>
+cd todo-list-rest-api
 npm install
 ```
 
@@ -51,7 +51,7 @@ The server will start running on `http://localhost:3000`.
 
   - **Status Code:** 201 (Created)
 
-#### OR Curl:
+#### with cURL:
 ```curl -X POST -H "Content-Type: application/json" -d '{"title": "New Todo", "text": "New Todo Text"}' http://localhost:3000/todos```
 
 ### Get all todos
@@ -74,7 +74,7 @@ The server will start running on `http://localhost:3000`.
     ]
     ```
     
-#### OR Curl:
+#### with cURL:
 ```curl -X GET http://localhost:3000/todos```
     
 ### Toggle the completion of a todo
@@ -90,7 +90,7 @@ The server will start running on `http://localhost:3000`.
   - **Status Code:** 200 (OK) - If the todo exists and the completion status was toggled successfully.
   - **Status Code:** 404 (Not Found) - If the todo with the specified ID does not exist.
 
-#### OR Curl
+#### with cURL
 ```curl -X PUT http://localhost:3000/todos/{id}```
 
 ### Delete a todo
@@ -106,7 +106,7 @@ The server will start running on `http://localhost:3000`.
   - **Status Code:** 200 (OK) - If the todo was deleted successfully.
   - **Status Code:** 404 (Not Found) - If the todo with the specified ID does not exist.
 
-#### OR Curl
+#### with cURL
 ```curl -X DELETE http://localhost:3000/todos/{id}```
 
 ## Contributing
