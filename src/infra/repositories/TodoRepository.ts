@@ -1,7 +1,8 @@
 import fs from 'fs';
-import { Todo } from '../domain/Todo';
+import { Todo } from '../../domain/Todo';
+import { ITodoRepository } from './interfaces/ITodoRepository';
 
-export class TodoRepository {
+export class TodoRepository implements ITodoRepository {
 	private todos: Todo[];
 	private readonly filePath: string;
 	private nextId: number;

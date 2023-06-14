@@ -1,9 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { TodoController } from './application/TodoController';
-import { TodoRepository } from './infra/TodoRepo';
-import { addAuthHeader, addCacheControlHeader, enableCORS } from './infra/middlewares';
-import { requireBasicAuth } from './infra/middlewares';
+import { TodoRepository } from './infra/repositories/TodoRepository';
+import { addAuthHeader, addCacheControlHeader, enableCORS } from './infra/middlewares/middlewares';
+import { requireBasicAuth } from './infra/middlewares/middlewares';
 import dotenv from 'dotenv';
 
 dotenv.config();
